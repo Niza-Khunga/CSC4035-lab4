@@ -1,0 +1,484 @@
+/* Base Typography & Variables */
+:root {
+  --primary: #1b2a41;
+  --accent: #d4af37;
+  --light: #f5f5f5;
+  --dark: #0f1a2c;
+  --text: #333;
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Roboto", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--light);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Reusable Typography */
+h1,
+h2,
+h3 {
+  font-family: var(--font-serif);
+  color: var(--primary);
+}
+
+h1 span,
+h2 span {
+  color: var(--accent);
+}
+
+/* Navigation */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--primary);
+  padding: 1rem 2rem;
+  color: white;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  transition: background 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  background: var(--accent);
+  color: var(--primary);
+  border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+  background: url("images/hero-law.jpg") no-repeat center center/cover;
+  height: 75vh; /* Adjusted height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-overlay {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Slightly darker overlay for better contrast */
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 3rem; /* Increased size for better visibility */
+  margin-bottom: 1rem;
+  font-family: var(--font-serif);
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-family: var(--font-sans);
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: var(--primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/* Flex Section (index.html) */
+.flex-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
+  background: white;
+}
+
+.flex-item {
+  flex: 1 1 300px;
+  background: var(--light);
+  padding: 1.5rem;
+  border-left: 4px solid var(--accent);
+  transition: transform 0.3s ease;
+}
+
+.flex-item:hover {
+  transform: translateY(-5px);
+}
+
+/* Services Page Grid */
+.services-grid .grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.card-button:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+/* Services CTA Section */
+.services-cta {
+  background-color: #f4f4f4; /* Slightly light background */
+  padding: 40px 20px; /* Add space around the section */
+  text-align: center;
+  margin-top: 40px;
+}
+
+.services-cta h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px; /* Add space below the heading */
+  color: #333; /* Dark text for contrast */
+}
+
+.services-cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px; /* Add some spacing below the paragraph */
+  color: #666; /* Slightly lighter color for the paragraph text */
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center; /* Center the buttons */
+  gap: 20px; /* Add space between the buttons */
+}
+
+.cta-buttons a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.cta-buttons .primary-cta {
+  background-color: #004d99; /* Blue color for primary CTA */
+  color: white;
+}
+
+.cta-buttons .primary-cta:hover {
+  background-color: #003366; /* Darker blue on hover */
+}
+
+.cta-buttons .secondary-cta {
+  background-color: #e0e0e0; /* Light grey for secondary CTA */
+  color: #333;
+}
+
+.cta-buttons .secondary-cta:hover {
+  background-color: #bdbdbd; /* Darker grey on hover */
+}
+
+/* Contact Page Styles */
+.contact-main {
+  background-color: #f8f8f8; /* Light background color for the page */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-intro h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.contact-intro p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* Contact Form Styling */
+.contact-form {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.contact-form .form-group {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #004d99; /* Blue border on focus */
+  outline: none;
+}
+
+.contact-form textarea {
+  resize: vertical; /* Allow the textarea to expand vertically */
+}
+
+.contact-form button.submit-button {
+  background-color: #004d99;
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button.submit-button:hover {
+  background-color: #003366;
+}
+
+/* Contact CTA Section */
+.contact-cta {
+  background-color: #e0e0e0;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contact-cta h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.contact-cta p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.contact-cta .button {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.contact-cta .primary-cta {
+  background-color: #004d99;
+  color: white;
+}
+
+.contact-cta .primary-cta:hover {
+  background-color: #003366;
+}
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Animation Example */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.flex-item,
+.card,
+.contact-form {
+  animation: fadeInUp 0.6s ease-in;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 40vh;
+    padding: 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+}
+.hero {
+  background: url("images/hero-law.jpg") no-repeat center center / cover;
+  height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.hero-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-family: "Playfair Display", serif;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--accent);
+  color: var(--primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.hero-button:hover {
+  background-color: white;
+  color: var(--primary);
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}

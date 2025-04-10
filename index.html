@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aegis Legal Advocates | Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar (shared across pages) -->
+    <header>
+      <nav class="navbar">
+        <div class="logo">Aegis Legal Advocates</div>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Theme Toggle Button -->
+        <button id="themeToggle">Switch Theme</button>
+      </nav>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="hero">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <h1>Protecting Your Rights with Integrity & Expertise</h1>
+          <p>
+            Your justice is our mission – trusted legal advocacy for every case.
+          </p>
+          <a href="contact.html" class="hero-button">Schedule a Consultation</a>
+        </div>
+      </div>
+      <div class="slider-container">
+        <div class="slider">
+          <img
+            src="https://source.unsplash.com/random/1200x600/?law"
+            alt="Legal Team"
+          />
+          <img
+            src="https://source.unsplash.com/random/1200x600/?court"
+            alt="Courtroom"
+            style="display: none"
+          />
+          <img
+            src="https://source.unsplash.com/random/1200x600/?justice"
+            alt="Justice"
+            style="display: none"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Flexbox Section: Intro + Sidebar -->
+    <section class="flex-container">
+      <div class="intro">
+        <h2>About Us</h2>
+        <p>
+          At Aegis Legal Advocates, we stand as your shield in legal matters,
+          offering trusted advice and strategic representation across a wide
+          range of legal fields.
+        </p>
+      </div>
+      <div class="sidebar">
+        <h3>Why Choose Us?</h3>
+        <ul>
+          <li>Over 20 years of experience</li>
+          <li>Client-centered approach</li>
+          <li>Ethical and transparent practices</li>
+          <li>Proven record of success</li>
+        </ul>
+      </div>
+    </section>
+    <section class="team-section">
+      <h2>Team Members</h2>
+      <ul id="userList"></ul>
+      <button id="loadUsersBtn" class="button primary-cta">
+        Load Our Team
+      </button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Aegis Legal Advocates. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+    <!-- Link to your script -->
+  </body>
+</html>
